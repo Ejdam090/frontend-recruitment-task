@@ -1,4 +1,4 @@
-const { src, dest, watch, series, parallel } = require('gulp');
+const { src, dest, watch, series, parallel, gulp} = require('gulp');
 
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass')(require('sass'));
@@ -9,6 +9,7 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const browesersync = require('browser-sync').create();
 var replace = require('gulp-replace');
+const gulpConcat = require('gulp-concat');
 
 // File paths
 const files = { 
@@ -25,6 +26,7 @@ function scssTask(){
         .pipe(dest('dist')
     ); // put final CSS in dist folder
 }
+
 
 function jsTask(){
     return src([
@@ -44,11 +46,12 @@ function cacheBustTask(){
 }
 
 function watchTask(){
-    watch('*.html', browsersyncReload);
+    
     watch([files.scssPath, files.jsPath], 
-        parallel(scssTask, jsTask));    
+        parallel(scssTask, jsTask));   
+        watch('*.html', browsersyncReload); 
+        watch('src/scss/**/*.scss', browsersyncReload);
 }
-gulp
 function browsersyncServe(cb){
     browesersync.init({
         server:{
@@ -64,7 +67,7 @@ function browsersyncReload(cb){
 }
 
 
-//Watch Task
+
 
 
 

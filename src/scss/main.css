@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  max-width: 1440px;
+  height: 100vh;
+  font-size: 1rem;
+}
+
+.body-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10rem 5rem;
+  width: 100%;
+}
+
+.body-content .overlay-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #121212;
+}
+
+.body-content .popup-container {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  background-color: #fff;
+  border: 1px solid #bbb;
+  width: 40rem;
+  height: 10rem;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.body-content .popup-container .popup-title {
+  font-size: 2.5rem;
+  padding: .5rem;
+}
+
+.body-content .popup-container .popup-text {
+  padding: 0.6rem;
+}
+
+.body-content .popup-container i {
+  color: black;
+}
+
+.body-content .img-section {
+  padding: 1rem;
+}
+
+.body-content .img-section img {
+  width: 505px;
+  height: 330px;
+}
+
+.body-content .content-section {
+  padding: 4rem;
+  width: 50%;
+}
+
+.body-content .content-section .content-title {
+  font-size: 2.65rem;
+  margin: 1.5rem 1rem;
+  font-weight: 700;
+}
+
+.body-content .content-section .content-paragraph {
+  width: 380px;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.body-content .content-section .btn {
+  color: #fff;
+  border: none;
+  background-color: #e4c1ae;
+  border-radius: 32px;
+  padding: 1rem 2.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.body-content .content-section .btn:hover {
+  background-color: #b69a8c;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+/*# sourceMappingURL=main.css.map */
