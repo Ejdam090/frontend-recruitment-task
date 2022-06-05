@@ -1,13 +1,18 @@
 {
   "name": "gravity-global-recruitment-task",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "Zadanie jest przeznaczone na każdy poziom umiejętności developera, dzieli się na poszczególne zadania,\r które są stopniowo coraz trudniejsze. Każdy powinien zrobić test na tyle ile aktualnie potrafi, gdyż\r poszukujemy bardzo często osób z różnym poziomem wiedzy.",
+=======
+  "description": "",
+>>>>>>> ea81e4dc50228a58c5d37c7423c6ef0bce853820
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
+<<<<<<< HEAD
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ejdam090/frontend-recruitment-task.git"
@@ -24,5 +29,18 @@
   },
   "dependencies": {
     "gulp-concat": "^2.6.1"
+=======
+  "devDependencies": {
+    "autoprefixer": "^9.6.0",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+>>>>>>> ea81e4dc50228a58c5d37c7423c6ef0bce853820
   }
 }
