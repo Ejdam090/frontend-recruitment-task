@@ -1,12 +1,14 @@
 //fonts
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
-@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 
 //variables
 $btn-color: #e4c1ae;
 $btn-color-hover: #b69a8c;
 $white-color: #fff;
 $black-color: rgba(18, 18, 18, 50%);
+$medium: 1024px;
+$small: 425px;
 
 * {
   box-sizing: border-box;
@@ -15,66 +17,87 @@ $black-color: rgba(18, 18, 18, 50%);
 }
 body {
   font-family: "Roboto", sans-serif;
-  max-width: 1440px;
   height: 100vh;
   font-size: 1rem;
 }
 .popup-shadow {
-    display: none;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: $black-color;
+  .popup-reset {
+    width: 5rem;
+    background-color: $btn-color;
+    padding: 1rem;
+    color: $white-color;
+    border: none;
+    border-radius: 32px;
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: $black-color;
-    .popup-reset{
-        width: 5rem;
-        background-color: $btn-color;
-        padding: 1rem;
-        color: $white-color;
-        border: none;
-        border-radius: 32px;
-        position: absolute;
-        right: 5rem;
-        bottom: 2rem;
-        transition: all .4s ease-in-out;
-        cursor: pointer;
-        display: none;
-        &:hover{
-            background-color: #b69a8c;
-        }
-
+    right: 5rem;
+    bottom: 2rem;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    display: none;
+    &:hover {
+      background-color: #b69a8c;
     }
-    .popup-container {
-        
-      position: absolute;
-      top: 40%;
-      left: 30%;
-      background-color: $white-color;
-      border: 1px solid #bbb;
-      width: 40rem;
-      height: 10rem;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column ;
-      .popup-title{
-          font-size: 2.5rem;
-          padding: .5rem;
-      }
-      .popup-text{
-          padding: 0.6rem;
-      }
-      #close{
-          color: black;
-          position: absolute;
-          top: 1rem;
-          right: 1.5rem;
-          cursor: pointer;
-      }
+    @media screen and (max-width: $medium) {
+      right: 1.5rem;
     }
   }
+  .popup-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white-color;
+    border: 1px solid #bbb;
+    width: 40rem;
+    height: 10rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: $medium) {
+      width: 50%;
+      height: 14rem;
+    }
+    @media screen and (max-width: $small) {
+      height: 15rem;
+    }
+    @media screen and (max-width: 345px) {
+      height: 17rem;
+    }
 
-
+    .popup-title {
+      font-size: 2.5rem;
+      padding: 0.5rem;
+      @media screen and (max-width: $medium) {
+        font-size: 1.5rem;
+        width: 100%;
+      }
+      @media screen and (max-width: $small) {
+        font-size: 1.2rem;
+      }
+    }
+    .popup-text {
+      padding: 0.6rem;
+      @media screen and (max-width: $small) {
+        font-size: 0.9rem;
+        width: 100%;
+      }
+    }
+    #close {
+      color: #000000;
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      cursor: pointer;
+    }
+  }
+}
 
 .body-content {
   display: flex;
@@ -83,27 +106,51 @@ body {
   align-items: center;
   padding: 10rem 5rem;
   width: 100%;
-  
-
+  max-width: 1440px;
+  @media screen and (max-width: $medium) {
+    flex-direction: column;
+    padding: 2rem;
+  }
   .img-section {
     padding: 1rem;
+    @media screen and (max-width: $medium) {
+      width: 100%;
+    }
     img {
-      width: 505px;
-      height: 330px;
+      width: 31rem;
+      height: 20.625rem;
+      @media screen and (max-width: $medium) {
+        width: 100%;
+      }
     }
   }
   .content-section {
     padding: 4rem;
     width: 50%;
+    @media screen and (max-width: $medium) {
+      padding: 2rem;
+      width: 100%;
+    }
     .content-title {
       font-size: 2.65rem;
       margin: 1.5rem 1rem;
       font-weight: 700;
+      @media screen and (max-width: $medium) {
+        width: 100%;
+      }
+      @media screen and (max-width: $small) {
+        font-size: 1.5rem;
+        margin: 0.2rem;
+        width: 100%;
+      }
     }
     .content-paragraph {
-      width: 380px;
+      width: 23.75rem;
       font-size: 1rem;
       font-weight: 300;
+      @media screen and (max-width: $medium) {
+        width: 100%;
+      }
     }
     .content-btn {
       color: $white-color;
