@@ -27,7 +27,7 @@ body {
     height: 100%;
     width: 100%;
     background: $black-color;
-    .reset{
+    .popup-reset{
         width: 5rem;
         background-color: $btn-color;
         padding: 1rem;
@@ -64,7 +64,7 @@ body {
       .popup-text{
           padding: 0.6rem;
       }
-      i{
+      #close{
           color: black;
           position: absolute;
           top: 1rem;
@@ -105,7 +105,7 @@ body {
       font-size: 1rem;
       font-weight: 300;
     }
-    .btn {
+    .content-btn {
       color: $white-color;
       border: none;
       background-color: $btn-color;
