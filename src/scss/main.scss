@@ -84,6 +84,9 @@ body {
     }
     .popup-text {
       padding: 0.6rem;
+      .popup-counter{
+          font-weight: bold;
+      }
       @media screen and (max-width: $small) {
         font-size: 0.9rem;
         width: 100%;

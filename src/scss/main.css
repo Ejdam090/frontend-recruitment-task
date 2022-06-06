@@ -8506,6 +8506,10 @@ body {
   padding: 0.6rem;
 }
 
+.popup-shadow .popup-container .popup-text .popup-counter {
+  font-weight: bold;
+}
+
 @media screen and (max-width: 425px) {
   .popup-shadow .popup-container .popup-text {
     font-size: 0.9rem;
