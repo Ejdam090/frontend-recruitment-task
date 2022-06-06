@@ -8,7 +8,18 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="stylesheet" href="/dist/main.css" />
-    <link href="/your-path-to-your-compiled-css-including-fontawesome/file.css" rel="stylesheet">
+    <link
+      href="node_modules\@fortawesome\fontawesome-free\css\fontawesome.css"
+      rel="stylesheet"
+    />
+    <link
+      href="node_modules\@fortawesome\fontawesome-free\css\brands.css"
+      rel="stylesheet"
+    />
+    <link
+      href="node_modules\@fortawesome\fontawesome-free\css\solid.css"
+      rel="stylesheet"
+    />
     <title>Adam Kosior - Recruitment task</title>
   </head>
   <body>
@@ -28,12 +39,15 @@
         </p>
         <button class="btn">Button</button>
       </div>
-      <div class="overlay-bg"></div>
+    </div>
+    <div class="popup-shadow">
       <div class="popup-container">
         <h2 class="popup-title">Alert!</h2>
-        <p class="popup-text">You have clicked X times to related button</p>
-        <i class="fa-regular fa-xmark-large"></i>
+        <p class="popup-text"></p>
+        <i id="close" class="fa-solid fa-xmark"></i>
+        <button class="reset">Reset</button>
       </div>
     </div>
+    <script src="src/js/main.js"></script>
   </body>
 </html>

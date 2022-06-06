@@ -51,6 +51,7 @@ function watchTask(){
         parallel(scssTask, jsTask));   
         watch('*.html', browsersyncReload); 
         watch('src/scss/**/*.scss', browsersyncReload);
+        watch( 'src/js/*.js', browsersyncReload);
 }
 function browsersyncServe(cb){
     browesersync.init({
@@ -65,10 +66,6 @@ function browsersyncReload(cb){
     browesersync.reload();
     cb();
 }
-
-
-
-
 
 
 exports.default = series(
